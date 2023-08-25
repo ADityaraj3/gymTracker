@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 import Obj from '../models/object.js';
 const app = express();
 
-const port = 3000;
+const port = 3000
 const mongoURL = 'mongodb://localhost:27017';
 const dbName = 'Gym_tracker';
 
