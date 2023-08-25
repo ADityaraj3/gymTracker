@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import { number } from "prop-types";
 
 const objectSchema = mongoose.Schema({
     exercise: {
@@ -7,7 +6,7 @@ const objectSchema = mongoose.Schema({
         required: true,
     },
     weight: {
-        type: number,
+        type: Number,
         required: true,
     },
     type: {
@@ -15,7 +14,7 @@ const objectSchema = mongoose.Schema({
         required: true,
     },
     reps: {
-        type:number,
+        type: Number,
         required: true,
     },
 },{

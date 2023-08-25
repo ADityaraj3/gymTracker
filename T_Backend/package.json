@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "backend for gym tracker",
   "main": "index.js",
-  "type": "module",
+  "type": "module", 
   "scripts": {
     "test": "npm run dev",
     "dev": "node index.js"

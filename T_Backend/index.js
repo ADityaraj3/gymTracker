@@ -1,12 +1,13 @@
-const express = require('express')
-const express = require('express')
-const mongoose = require("mongoose")
-import Obj from '../models/object.js';
-import { objs } from './data/index.js';
+import express from 'express'
+import mongoose from 'mongoose'
+import Obj from './models/object.js'
+import { objs } from './data/index.js'
 
 const port = 3000
 const mongoURL = 'mongodb+srv://khemesarashreyansh:wSvCBS6ZjupLRLqz@gymtracker.6b7y63a.mongodb.net/?retryWrites=true&w=majority';
 const dbName = 'gymTracker';
+
+const app = express()
 
 mongoose.connect(mongoURL, {
     dbName: dbName,
@@ -15,6 +16,7 @@ mongoose.connect(mongoURL, {
 },
 Obj.insertMany(objs),
 ).then(()=>console.log("connected to db"))
+.catch((err)=>console.log("error: " + err))
 
 
 app.get('/', (req, res)=> {
