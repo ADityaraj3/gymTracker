@@ -14,10 +14,19 @@ mongoose.connect(mongoURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 },
-Obj.insertMany(objs),
+// Obj.insertMany(objs),
 ).then(()=>console.log("connected to db"))
 .catch((err)=>console.log("error: " + err))
 
+app.get('/getUserData', async (req, res)=>{
+    try {
+        const data = await Obj.find()
+        res.status(200).json(data)
+    } catch (err ) {
+        console.log(err)
+        res.status(404).json({"msg" : err })
+    }
+})
 
 app.get('/', (req, res)=> {
 res.send("hello world")
