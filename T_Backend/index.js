@@ -4,8 +4,8 @@ import Obj from '../models/object.js';
 const app = express();
 
 const port = 3000
-const mongoURL = 'mongodb://localhost:27017';
-const dbName = 'Gym_tracker';
+const mongoURL = 'mongodb+srv://khemesarashreyansh:wSvCBS6ZjupLRLqz@gymtracker.6b7y63a.mongodb.net/?retryWrites=true&w=majority';
+const dbName = 'gymTracker';
 
 mongoose.connect(mongoURL, {
         dbName: dbName,
